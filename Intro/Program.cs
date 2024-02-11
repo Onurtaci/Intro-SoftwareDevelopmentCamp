@@ -1,4 +1,5 @@
 ﻿using Intro.Business;
+using Intro.DataAccess.Concretes;
 using Intro.Entities;
 
 Console.WriteLine("Hello, World!");
@@ -52,8 +53,8 @@ for (int i = 0; i < loans.Length; i++)
 //    Console.WriteLine(course.Name + " / " + course.Price);
 //}
 
-CourseManager courseManager = new();
-Course[] courses2 = courseManager.GetAll();
+CourseManager courseManager = new(new CourseDal());
+List<Course> courses2 = courseManager.GetAll();
 
 foreach (var course in courses2)
 {
