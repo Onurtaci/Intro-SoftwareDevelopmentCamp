@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Intro.DataAccess.Concretes
 {
-    public class EfCourseDal : ICourseDal
+    public class DapperCourseDal : ICourseDal
     {
         List<Course> courses;
 
-        public EfCourseDal()
+        public DapperCourseDal()
         {
             Course course1 = new();
             course1.Id = 1;
-            course1.Name = "Js";
+            course1.Name = "Rust";
             course1.Description = "C#  .NET 8";
             course1.Price = 0;
 
