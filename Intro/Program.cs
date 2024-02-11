@@ -61,3 +61,39 @@ foreach (var course in courses2)
 }
 
 Console.WriteLine("Kod bitti");
+
+IndividualCustomer customer1 = new();
+customer1.Id = 1;
+customer1.NationalIdentity = "12345678922";
+customer1.FirstName = "Ali";
+customer1.LastName = "Köse";
+customer1.CustomerNumber = "123456";
+
+IndividualCustomer customer2 = new();
+customer2.Id = 2;
+customer2.NationalIdentity = "12345678822";
+customer2.FirstName = "Özlem";
+customer2.LastName = "Atılgan";
+customer2.CustomerNumber = "123457";
+
+CorporateCustomer customer3 = new();
+customer3.Id = 3;
+customer3.CompanyName = "Kodlama.io";
+customer3.CustomerNumber = "123458";
+customer3.TaxNumber = "1234567890";
+
+CorporateCustomer customer4 = new();
+customer4.Id = 4;
+customer4.CompanyName = "Abc";
+customer4.CustomerNumber = "654779";
+customer4.TaxNumber = "1234567898";
+
+//value type and reference type was explained
+
+BaseCustomer[] customers = { customer1, customer2, customer3, customer4 };
+
+//Polymorphism
+foreach (BaseCustomer customer in customers)
+{
+    Console.WriteLine(customer.CustomerNumber);
+}
